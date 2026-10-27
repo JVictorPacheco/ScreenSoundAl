@@ -1,4 +1,10 @@
-﻿class Album
+﻿using ScreenSound.Modelos;
+
+
+namespace ScreenSound.Modelos;
+
+
+internal class Album
 {
 
     // Propriedades
