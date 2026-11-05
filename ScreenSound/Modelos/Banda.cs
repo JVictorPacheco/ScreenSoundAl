@@ -28,6 +28,7 @@ internal class Banda
     }
         
     public List<Album> Albuns => albuns; // Retorna a lista de álbuns da banda
+    public int Integrantes { get; set; } // Propriedade para armazenar o número de integrantes da banda
 
 
     // Métodos
@@ -48,6 +49,11 @@ internal class Banda
         {
             Console.WriteLine($"Álbum: {album.Nome} ({album.DuracaoTotal})");
         }
+    }
+
+    public void AdicionarIntegrantes(int quantidade)
+    {
+        Integrantes += quantidade;
     }
 }
 
