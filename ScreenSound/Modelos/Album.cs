@@ -9,16 +9,18 @@ internal class Album
 
     // Propriedades
     private List<Musica> musicas = new List<Musica>();
+    public static int ContadorDeObjetos = 0; // Contador de objetos do tipo Album. Eu posso usar um contador de objetos para saber quantos álbuns foram criados durante a execução do programa. Isso pode ser útil para fins de monitoramento, estatísticas ou para implementar funcionalidades específicas relacionadas à quantidade de álbuns existentes.
 
     public Album(string nome) // Construtor
     {
         Nome = nome; // Inicializa a propriedade Nome com o valor passado como argumento
+
+        ContadorDeObjetos++;
     }
 
     public string Nome { get; }
     public int DuracaoTotal => musicas.Sum(m => m.Duracao);
     public List<Musica> Musicas => musicas;
-
 
     // Métodos
     public void AdicionarMusica(Musica musica)
