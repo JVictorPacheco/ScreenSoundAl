@@ -1,4 +1,4 @@
-﻿using ScreendSound.Modelos;
+﻿using ScreenSound.Modelos;
 
 namespace ScreenSound.Menus;
 
@@ -19,7 +19,6 @@ internal class MenuAvaliarBanda : Menu
                 Console.WriteLine("Nota inválida. Por favor, digite um número entre 0 e 10.");
                 Thread.Sleep(2000);
                 Console.Clear();
-                ExibirOpcoesDoMenu();
                 return;
             }
 

@@ -1,11 +1,11 @@
-﻿using ScreendSound.Modelos;
+﻿using ScreenSound.Modelos;
 
 namespace ScreenSound.Menus;
 
 
 internal class MenuRegistrarAlbum : Menu
 {
-	public void Executar()
+	public void Executar(Dictionary<string, Banda> bandasRegistradas)
 	{
         Console.Clear();
         ExibirTituloDaOpcao("Registro de álbuns");
@@ -20,6 +20,5 @@ internal class MenuRegistrarAlbum : Menu
         Console.WriteLine($"O álbum {tituloAlbum} de {nomeDaBanda} foi registrado com sucesso!");
         Thread.Sleep(4000);
         Console.Clear();
-        ExibirOpcoesDoMenu();
     }
 }

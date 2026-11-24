@@ -36,6 +36,7 @@ void ExibirLogo()
     Console.WriteLine("Boas vindas ao Screen Sound 2.0!");
 }
 
+
 void ExibirOpcoesDoMenu()
 {
     ExibirLogo();
@@ -62,16 +63,18 @@ void ExibirOpcoesDoMenu()
     {
         case 1:
             MenuRegistrarBanda menu1 = new MenuRegistrarBanda();
-            menu1.Executar();
+            menu1.Executar(bandasRegistradas);
             ExibirOpcoesDoMenu();
             break; 
         case 2:
             MenuRegistrarAlbum menu2 = new MenuRegistrarAlbum();
-            menu2.Executar();
+            menu2.Executar(bandasRegistradas);
             ExibirOpcoesDoMenu();
             break;
         case 3:
             MenuMostrarBandasRegistradas menu3 = new MenuMostrarBandasRegistradas();
+            menu3.Executar(bandasRegistradas);
+            ExibirOpcoesDoMenu();
             break;
         case 4:
             MenuAvaliarBanda menu4 = new MenuAvaliarBanda();

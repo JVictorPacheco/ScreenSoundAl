@@ -1,10 +1,10 @@
-﻿using ScreendSound.Modelos;
+﻿using ScreenSound.Modelos;
 
 namespace ScreenSound.Menus;
 
 internal class MenuMostrarBandasRegistradas : Menu
 {
-	public void Executar()
+	public void Executar(Dictionary<string, Banda> bandasRegistradas)
 	{
         Console.Clear();
         ExibirTituloDaOpcao("Exibindo todas as bandas registradas na nossa aplicação");
@@ -17,6 +17,5 @@ internal class MenuMostrarBandasRegistradas : Menu
         Console.WriteLine("\nDigite uma tecla para voltar ao menu principal");
         Console.ReadKey();
         Console.Clear();
-        ExibirOpcoesDoMenu();
     }
 }
